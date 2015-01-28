@@ -20,3 +20,8 @@
 <p>为什么叫最少知道原则，就是说：一个实体应当尽量少的与其他实体之间发生相互作用，使得系统功能模块相对独立。</p><br />
 6、合成复用原则（Composite Reuse Principle）<br />
 <p>原则是尽量使用合成/聚合的方式，而不是使用继承。</p><br />
+
+Java的23中设计模式<br />
+1、工厂方法模式（Factory Method）<br />
+普通工厂模式
+<img src='http://dl.iteye.com/upload/attachment/0083/1180/421a1a3f-6777-3bca-85d7-00fc60c1ae8b.png'/>
