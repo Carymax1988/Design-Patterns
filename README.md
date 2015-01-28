@@ -1,4 +1,6 @@
 # Design-Patterns
+<p>转载网址<a href='http://zz563143188.iteye.com/blog/1847029'>http://zz563143188.iteye.com/blog/1847029</a></p><br />
+
 设计模式<br />
 <br />
 设计模式的分类<br />
@@ -23,5 +25,5 @@
 
 Java的23中设计模式<br />
 1、工厂方法模式（Factory Method）<br />
-普通工厂模式
+普通工厂模式<br />
 <img src='http://dl.iteye.com/upload/attachment/0083/1180/421a1a3f-6777-3bca-85d7-00fc60c1ae8b.png'/>
