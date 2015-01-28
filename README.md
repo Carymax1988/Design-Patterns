@@ -1,5 +1,5 @@
 # Design-Patterns
-<p>转载网址<a href='http://zz563143188.iteye.com/blog/1847029'>http://zz563143188.iteye.com/blog/1847029</a></p><br />
+<p>转载网址<a href='http://blog.csdn.net/zhangerqing/article/details/8194653'>http://blog.csdn.net/zhangerqing/article/details/8194653</a></p><br />
 
 设计模式<br />
 <br />
@@ -8,6 +8,7 @@
 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。<br />
 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。<br />
 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。<br />
+<img src='http://img.my.csdn.net/uploads/201211/29/1354152786_2930.jpg' /><br />
 <br />
 设计模式的六大原则<br />
 1、开闭原则（Open Close Principle）<br />
@@ -26,4 +27,35 @@
 Java的23中设计模式<br />
 1、工厂方法模式（Factory Method）<br />
 普通工厂模式<br />
-<img src='http://dl.iteye.com/upload/attachment/0083/1180/421a1a3f-6777-3bca-85d7-00fc60c1ae8b.png'/>
+<img src='http://img.my.csdn.net/uploads/201211/29/1354156868_1191.PNG'/><br />
+多个工厂方法模式<br />
+<img src='http://img.my.csdn.net/uploads/201211/29/1354158145_2392.PNG' /><br />
+静态工厂方法模式<br />
+将上面的多个工厂方法模式里的方法置为静态的，不需要创建实例，直接调用即可。<br />
+<p>总体来说，工厂模式适合：凡是出现了大量的产品需要创建，并且具有共同的接口时，可以通过工厂方法模式进行创建。在以上的三种模式中，第一种如果传入的字符串有误，不能正确创建对象，第三种相对于第二种，不需要实例化工厂类，所以，大多数情况下，我们会选用第三种——静态工厂方法模式。</p><br />
+2、抽象工厂模式（Abstract Factory）<br />
+<img src='http://img.my.csdn.net/uploads/201211/29/1354159363_7245.PNG' /><br />
+<p>其实这个模式的好处就是，如果你现在想增加一个功能：发及时信息，则只需做一个实现类，实现Sender接口，同时做一个工厂类，实现Provider接口，就OK了，无需去改动现成的代码。这样做，拓展性较好！</p><br />
+3、单例模式（Singleton）<br />
+<p>实际情况是，单例模式使用内部类来维护单例的实现，JVM内部的机制能够保证当一个类被加载的时候，这个类的加载过程是线程互斥的。</p><br />
+<p>public class Singleton {  
+  
+    /* 私有构造方法，防止被实例化 */  
+    private Singleton() {  
+    }  
+  
+    /* 此处使用一个内部类来维护单例 */  
+    private static class SingletonFactory {  
+        private static Singleton instance = new Singleton();  
+    }  
+  
+    /* 获取实例 */  
+    public static Singleton getInstance() {  
+        return SingletonFactory.instance;  
+    }  
+  
+    /* 如果该对象被用于序列化，可以保证对象在序列化前后保持一致 */  
+    public Object readResolve() {  
+        return getInstance();  
+    }  
+}</p>
